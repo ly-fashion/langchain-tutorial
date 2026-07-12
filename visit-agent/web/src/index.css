@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+/* 自定义样式 */
+.chat-container {
+  @apply flex flex-col h-screen bg-gray-50;
+}
+
+.chat-header {
+  @apply bg-white shadow-sm border-b px-6 py-4;
+}
+
+.chat-messages {
+  @apply flex-1 overflow-y-auto p-6 space-y-4;
+}
+
+.message {
+  @apply flex gap-3 max-w-3xl;
+}
+
+.message-user {
+  @apply ml-auto flex-row-reverse;
+}
+
+.message-assistant {
+  @apply mr-auto;
+}
+
+.message-bubble {
+  @apply rounded-2xl px-4 py-3 shadow-sm;
+}
+
+.message-bubble-user {
+  @apply bg-blue-500 text-white rounded-tr-md;
+}
+
+.message-bubble-assistant {
+  @apply bg-white text-gray-800 rounded-tl-md border;
+}
+
+.chat-input {
+  @apply bg-white border-t px-6 py-4;
+}
+
+.input-wrapper {
+  @apply flex gap-3 max-w-3xl mx-auto;
+}
+
+.input-field {
+  @apply flex-1 border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none;
+}
+
+.send-button {
+  @apply bg-blue-500 text-white rounded-xl px-6 py-3 hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.clear-button {
+  @apply text-gray-500 hover:text-gray-700 transition-colors;
+}
+
+/* 打字动画 */
+.typing-indicator {
+  @apply flex gap-1 p-2;
+}
+
+.typing-dot {
+  @apply w-2 h-2 bg-gray-400 rounded-full animate-bounce;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+/* Markdown 样式 */
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  @apply font-bold mt-4 mb-2;
+}
+
+.markdown-content h1 {
+  @apply text-xl;
+}
+
+.markdown-content h2 {
+  @apply text-lg;
+}
+
+.markdown-content p {
+  @apply mb-2;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  @apply ml-4 mb-2;
+}
+
+.markdown-content li {
+  @apply mb-1;
+}
+
+.markdown-content code {
+  @apply bg-gray-100 px-1 py-0.5 rounded text-sm;
+}
+
+.markdown-content pre {
+  @apply bg-gray-100 p-3 rounded-lg overflow-x-auto mb-2;
+}
+
+.markdown-content table {
+  @apply border-collapse mb-2;
+}
+
+.markdown-content th,
+.markdown-content td {
+  @apply border px-3 py-2;
+}
+
+.markdown-content th {
+  @apply bg-gray-100;
+}
+
+.markdown-content blockquote {
+  @apply border-l-4 border-gray-300 pl-4 italic my-2;
+}
